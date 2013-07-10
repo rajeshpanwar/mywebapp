@@ -1,0 +1,45 @@
+
+.light {
+	font-weight:200 !important
+}
+.extra-bold {
+	font-weight:800 !important
+}
+.regular {
+	font-weight:normal !important
+}
+@font-face {
+	font-family:'Proxima Nova';
+	src:url(../font/ProximaNova-Reg-webfont.eot);
+	src:url(../font/ProximaNova-Reg-webfont.eot?iefix) format("eot"), url(../font/ProximaNova-Reg-webfont.woff) format("woff"), url(../font/ProximaNova-Reg-webfont.ttf) format("truetype"), url(http://zurb.com/assets/ProximaNova-Reg-webfont.svg#webfontZam02nTh) format("svg");
+	font-weight:normal;
+	font-style:normal
+}
+@font-face {
+	font-family:'Proxima Nova';
+	src:url(../font/ProximaNova-Light-webfont.eot);
+	src:url(../font/ProximaNova-Light-webfont.eot?iefix) format("eot"), url(../font/ProximaNova-Light-webfont.woff) format("woff"), url(../font/ProximaNova-Light-webfont.ttf) format("truetype"), url(http://zurb.com/assets/ProximaNova-Light-webfont.svg#webfontBtAcCspH) format("svg");
+	font-weight:200;
+	font-style:normal
+}
+@font-face {
+	font-family:'Proxima Nova';
+	src:url(../font/ProximaNova-Bold-webfont.eot);
+	src:url(../font/ProximaNova-Bold-webfont.eot?iefix) format("eot"), url(../font/ProximaNova-Bold-webfont.woff) format("woff"), url(../font/ProximaNova-Bold-webfont.ttf) format("truetype"), url(http://zurb.com/assets/ProximaNova-Bold-webfont.svg#webfontZ6etP9ZY) format("svg");
+	font-weight:bold;
+	font-style:normal
+}
+@font-face {
+	font-family:'Proxima Nova';
+	src:url(../font/ProximaNova-Xbold-webfont.eot);
+	src:url(../font/ProximaNova-Xbold-webfont.eot?iefix) format("eot"), url(../font/ProximaNova-Xbold-webfont.woff) format("woff"), url(../font/ProximaNova-Xbold-webfont.ttf) format("truetype"), url(http://zurb.com/assets/ProximaNova-Xbold-webfont.svg#webfont2rpW2ohz) format("svg");
+	font-weight:900;
+	font-style:normal
+}
+@font-face {
+	font-family:'ProximaNovaCondensedBold';
+	src:url(../font/proximanovacond-bold-webfont.eot);
+	src:url(../font/proximanovacond-bold-webfont.eot?#iefix) format("embedded-opentype"), url(../font/proximanovacond-bold-webfont.woff) format("woff"), url(../font/proximanovacond-bold-webfont.ttf) format("truetype"), url(http://zurb.com/assets/proximanovacond-bold-webfont.svg#ProximaNovaCondensedBold) format("svg");
+	font-weight:normal;
+	font-style:normal
+}

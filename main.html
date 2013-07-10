@@ -1,0 +1,43 @@
+
+<div ng-controller="MainCtrl">
+
+    <ng-include src="'venuebar.html'"></ng-include>
+    <ng-include src="'VenueChannels.html'"></ng-include>
+
+    <div class="row">
+        <div class="large-8 columns">
+            <div class="main-box">
+                <!-- start - channel header -->
+                <div class="row ">
+                    <div class="large-12 columns listing">
+
+                        <ul class="breadcrumb1 " >
+                            <li>
+                                <a ng-click="selectAllChannels()" class="conversation-show" >Conversations</a>
+
+                            </li>
+                            <li style="font-weight:normal;color:#aaa">
+                                /
+                            </li>
+                            <li class="current" ng-hide="channelId">
+                                All Channels
+                            </li>
+                            <li class="current" ng-show="channelId">
+                                {{currentChannel.name}}
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- end - channel header -->
+                <!-- start - venue/channel conversations -->
+                <div ng-controller="ConversationsCtrl">
+                    <div ui-view="VenueConversations"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+

@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+
+#sign-up-modal form, #sign-in-modal  form, #add-channel-modal form, #forgot_password form, #change-password-modal form, #edit-profile-modal form{ margin:0;}
+#sign-up-modal  h2, #sign-in-modal h2 ,#add-channel-modal h2, #forgot_password h2, #change-password-modal h2, #edit-profile-modal h2 {color:#51ae29;text-shadow: 0px 1px 0px rgb(255, 255, 255), 1px -1px 8px #fff !important; margin-bottom:5px;}
+#sign-up-modal, #sign-in-modal ,#add-channel-modal , #loadingModel , #forgot_password, #change-password-modal, #edit-profile-modal { border-radius:6px;background: #ebe9ea; color:#666; -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);}
+
+#sign-up-modal label, #sign-in-modal label , #add-channel-modal label, #forgot_password label, #change-password-modal label, #edit-profile-modal label{line-height: 28px; color:#666}
+
+#sign-up-modal input,  #sign-in-modal input , #add-channel-modal input, #forgot_password input, #change-password-modal input, #edit-profile-modal input{border:1px solid #999;}
+
+#sign-up-modal fieldset,  #sign-in-modal fieldset{ margin-bottom:0;}
+
+#sign-up-modal .horiz-divider{margin:15px 0;}
+
+#sign-in-modal .horiz-divider{margin:0 0 5px 0;}
+
+#sign-in-modal h3{margin-bottom:0;color:#666}
+#sign-in-modal h3 a{color:#51ae29}
+
+.cancel-button{margin-bottom:10px;background:#cd3d37; border:1px solid #cd3d37;border-radius: 6px;
+padding: 10px 25px;}
+
+.sign-in-button{margin-top:10px;background:#cd3d37; border:1px solid #cd3d37;border-radius: 6px;
+padding: 10px 25px;}
+
+.cancel-button:hover,.sign-in-button:hover{background:#a12d28;}
+.close-reveal-modal i {color:#51ae29;text-shadow: 0px 1px 0px rgb(255, 255, 255), 1px -1px 8px #fff !important;}
+
+
+.sign-up-button:hover,  .create-button:hover{background:#42941f}
+.sign-up-button, .create-button{margin-bottom:15px;background:#51ae29;border:1px solid #3d861e;;border-radius: 6px;
+padding: 10px 25px; }
+
+.forgot{ font-size:13px;color:#51ae29}
+
+.mb20{margin-bottom:20px !important;}
+#edit-profile-modal .mb20,  #change-password-modal .mb20{margin-bottom:0px !important;}
+.photo-thumb {
+border: 1px solid #fff;
+background: url(../img/temp/venue.png) no-repeat;
+max-width: 737px;
+height: 167px;
+position: relative;
+}

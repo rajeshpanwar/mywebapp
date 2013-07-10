@@ -1,0 +1,11 @@
+<div class=" content-box" ng-controller="VenueConversationsCtrl" ng-hide="currentChannel.url||conversationId" >
+    <ul class="large-12" style="list-style:none; margin:20px 0;" ng-show="venueConversations || authenToken" ng-hide="privateChannelMessage">
+        <li class="comment-row" ng-repeat="conversation in conversations| toArray| orderBy:'-timestamp'">
+            <ng-include src="'conversation.html'"></ng-include>
+            <div class="horiz-divider"></div>
+        </li>
+        <li class="loadingconv" ng-show="loadingConversations"></li>
+        <li style="text-align:center"><a class="button loadMore" ng-click="loadOlderConversations()">Load older
+            conversations</a></li>
+    </ul>
+</div>

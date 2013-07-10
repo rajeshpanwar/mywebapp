@@ -1,0 +1,67 @@
+    <div class="comment-channel " ng-hide="currentChannel">
+        <i class=" icon-tags"></i>
+        <a class="trans glow" href="javascript:void(0)" ng-click="selectChannel(conversation.channelId)">{{conversation.channelName}}</a>
+    </div>
+
+    <div class="author-image">
+        <img class="image-shadow" ng-src="{{conversation.userProfileMediaList| thumbnail: 'profile' }}"
+              onerror="src='img/profile-default.png'"/>
+    </div>
+    <div class="comment-content">
+        <div >
+            <div class="comment-desc">
+                <span class="author-name">{{conversation.userName}}</span>
+            </div>
+            <p class="comment" ng-bind-html-unsafe="conversation.description| parseUrlFilter:'_blank':'otherProperty'">
+
+            </p>
+        </div>
+        <p ng-show="conversation.mediaList">
+
+                <img class="image-shadow" ng-src="{{conversation.mediaList| thumbnail: 'message'}}"
+                     style="border: 1px solid #fff; border-radius: 3px; max-width:65%"/>
+
+        </p>
+        <div class="comment-buttons">
+            <a class="comment-button toggle-comment"
+               ng-click=" getMessages(conversation); showComment=!showComment"> <i
+                    class="icon-sprite icon-comment"></i> {{conversation.numMessages}} <span ng-hide="conversation.numMessages>1">comment</span><span ng-show="conversation.numMessages>1">comments</span> </a>
+        </div>
+        <ul class="sub-comments  " style="" ng-show="showComment">
+            <div class="horiz-divider"></div>
+            <div ng-show="loaderMessage && conversation.numMessages>0" ><img src='img/loader.gif' style="margin-left: 50%;"/></div>
+            <li class="large-offset-1  " ng-hide="message.messageId==conversation.startMessageId"
+                ng-repeat="message in conversation.messages">
+                <div class="comment-row">
+                    <div class="author-image "><img
+                            src="{{message.userProfileMediaList| thumbnail: 'profile' }}" on-error="src='img/profile-default.png'"></div>
+                    <div class="comment-content">
+                        <div class="comment-desc"><span class="author-name"><a class="trans glow" href="#">{{message.userName}}</a></span>
+                            · </div>
+                        <p class="comment" ng-bind-html-unsafe="message.description| parseUrlFilter:'_blank':'otherProperty'">
+
+                        </p>
+
+                        <p ng-show="message.mediaList">
+
+                                <img ng-src="{{message.mediaList| thumbnail: 'message'}}" style="border: 1px solid #fff; border-radius: 3px; max-width:50%"/>
+
+                        </p>
+
+                    </div>
+                    <div class="horiz-divider"></div>
+                </div>
+            </li>
+            <li ng-show="postMessage"><img src='img/loader.gif' style="margin-left: 50%;"/></li>
+            <li class="large-offset-1  " ng-hide="postMessage" >
+                <div class="comment-row" >
+                    <div class="author-image " ><a href="#" ng-show="{{currentUser.userId}}"><img
+                            src="{{currentUser.mediaList | thumbnail: 'profile'}}" on-error="src='img/profile-default.png'"></a></div>
+                    <div class="comment-content">
+                        <div class="comment-desc">
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>

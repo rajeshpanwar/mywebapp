@@ -1,0 +1,64 @@
+
+<div id="channel-bar" ng-controller="VenueChannels">
+
+    <div class="row">
+        <div class="large-12 columns">
+            <div class="">
+                <div class="row">
+                    <div class="large-12 columns channel-container">
+                        <div class="row display">
+                            <div class="large-9 columns channel-inner">
+
+                                <!-- Using both block grids together for different layouts -->
+                                <ul class="small-block-grid-3  large-block-grid-5 channel-list bounce" style="">
+
+                                    <a class="show-for-small lesser-channel hide-class" style=""><i
+                                            class=" icon-angle-up">&nbsp;</i></a>
+                                    <a class="show-for-small more-channel" style=" "><i
+                                            class="  icon-angle-down"></i></a>
+
+                                    <li class="channel-box {{hide}}"
+                                        ng-class="{active: channel.channelId==channelId}"
+                                        ng-repeat="channel in channels.slice(0,5)"
+                                        ng-show="$index < 5">
+                                        <div class="channel"
+                                             style="background-image:url({{channel.mediaList|thumbnail:'channel-v2-bg'}}) ;">
+                                            <a class="channel-label glow">{{channel.name}}</a>
+                                        </div>
+                                        <div class="hide-for-small vertical-bar"></div>
+                                    </li>
+
+                                    <li class="channel-box"
+                                        ng-class="{active: channel.channelId==channelId}"
+                                        ng-repeat="channel in channels.slice(5)" ng-show="morechannels">
+                                        <div class=" horiz-bar"></div>
+                                        <div class="channel"
+                                             style="background-image:url({{channel.mediaList|thumbnail:'channel-v2-bg'}}) ;">
+                                            <a class="channel-label glow">{{channel.name}}</a>
+                                        </div>
+                                        <div class="hide-for-small vertical-bar"></div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="large-3 columns button-pane">
+                                <ul class="hide-for-small large-block-grid-1 ">
+                                    <li>
+                                        <div id="moreChannel" class="text-center button-two">
+                                            <a ng-show="morechannels" ng-click="toggleLessChannel()"
+                                               class="button toggle-channel glow more-btn">Less <font
+                                                    class="hide-for-small">Channels</font></a>
+                                            <a ng-hide="morechannels" ng-click="toggleChannel()"
+                                               class="button toggle-channel glow more-btn">More <font
+                                                    class="hide-for-small">Channels</font></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
